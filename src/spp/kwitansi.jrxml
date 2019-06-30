@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30f7465f-6d1b-47e2-a942-cf9379d43de8">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="397"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT bulan.*,siswa.*,pembayaran.* FROM bulan inner join pembayaran ON bulan.nis=pembayaran.nis inner join siswa on pembayaran.nis=siswa.nis]]>
+	</queryString>
+	<field name="id_s" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="januari" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="februari" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maret" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="april" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mei" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="juni" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="juli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="agustus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="september" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="oktober" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="november" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desember" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="thn_ajr" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nis" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tunggak" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bln" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="angkatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tglbayar" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="byr" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tahun_ajar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bulan_Bayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="266" y="41" width="162" height="20" uuid="33c5b4ae-ccba-425c-8965-2135bf8b114f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thn_ajr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="195" y="41" width="138" height="20" uuid="f60ac26d-9c6c-4b32-bd5c-eab9db469033"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAHUN PELAJARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="21" width="302" height="20" uuid="a4348f5d-50e1-4392-8e0b-0b43a07694ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BIAYA PENYELENGGARA PENDIDIKAN (BPP)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="4" width="178" height="20" uuid="f8dbb4c4-6d5d-4288-9947-7bc9ba8d4d68"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KWITANSI PEMBAYARAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="187" splitType="Stretch">
+			<staticText>
+				<reportElement x="89" y="56" width="40" height="20" uuid="3551ec7b-a700-4c03-bb76-e6cd32a2ac9a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="16" width="63" height="20" uuid="0346f838-671c-4084-8549-d81e27811d98"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Terima dari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="36" width="30" height="20" uuid="ffe01f53-8b43-44eb-b55a-b36b17c04dec"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="5" y="16" width="293" height="170" uuid="0fd9434a-92d2-4900-ac0b-4f0f5ad48936"/>
+				<imageExpression><![CDATA["C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\spp\\src\\New folder\\Untitled-12.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="89" y="135" width="372" height="1" uuid="407a9822-d459-42d0-bae0-715c86ed75fe"/>
+			</line>
+			<line>
+				<reportElement x="89" y="159" width="372" height="1" uuid="07ddd9dd-da7f-467a-a598-c8040f473eb9"/>
+			</line>
+			<staticText>
+				<reportElement x="164" y="36" width="30" height="20" uuid="ddfa59ac-0b93-462f-a803-64a109a83412"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="166" width="30" height="20" uuid="3f9a6ecc-af98-4ee5-9c4c-9e49714187ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="16" width="30" height="20" uuid="1717ce19-6b53-40a2-943a-172160e36602"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="213" y="36" width="154" height="20" uuid="b9e134c1-a221-44c0-be27-2c2d9c176cbb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="166" width="154" height="20" uuid="c3e4fb1a-bc25-4431-a325-1bc76541cba7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{byr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="89" y="166" width="63" height="20" uuid="7175e845-266b-4a2d-b995-fa61bcc86e26"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Terbilang]]></text>
+			</staticText>
+			<line>
+				<reportElement x="89" y="112" width="372" height="1" uuid="c50aaf57-2780-4b1c-8da3-8092ee3ee483"/>
+			</line>
+			<textField>
+				<reportElement x="213" y="56" width="154" height="20" uuid="305376a2-44c0-4185-ba7c-ce5ccff83f07"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="16" width="154" height="20" uuid="1db75b3f-d962-44dc-8ef1-134cbad377dd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="164" y="56" width="30" height="20" uuid="439f31a7-0b55-443d-9d5c-29c91f05caa3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="93" width="105" height="20" uuid="325d0a4f-045c-4eec-8dcf-8bb4081b5932"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pembayaran bulan-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="93" width="267" height="20" uuid="c03df7ea-0e44-49f7-9e62-b5db7df985f6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bulan_Bayar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="451" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="93" width="553" height="1" uuid="59efe317-7190-4aab-aabd-919e4d237b96"/>
+			</line>
+			<staticText>
+				<reportElement x="195" y="46" width="80" height="20" uuid="33e1ebc9-7bfd-493e-a875-b1a43eed0eed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[September]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="4" width="80" height="20" uuid="518b5163-6af0-4341-b20a-ab279076b953"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Maret]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="4" width="80" height="20" uuid="3aef803b-b860-4c68-b69e-e5f4a67bf094"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Januari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="4" width="80" height="20" uuid="7ea740da-b248-485b-adbb-a189a57d62db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mei]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="46" width="80" height="20" uuid="db97fe04-4284-4dea-9db1-4486a4a27445"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Agustus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="4" width="80" height="20" uuid="bd01a2c6-b22e-4b8b-ad13-ba70a6a02756"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Februari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="46" width="80" height="20" uuid="16cd2d1d-6929-41c8-9df8-0cf934d532ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Juli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="46" width="80" height="20" uuid="728f34be-2365-469f-b382-ac52671e1ede"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Oktober]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="46" width="80" height="20" uuid="a630e9fb-0057-4a16-abcb-c72e911077dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[November]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="4" width="80" height="20" uuid="060b1c2b-ddac-4599-8572-25f36b1835e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Juni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="4" width="80" height="20" uuid="21085282-47de-45e5-b4ce-baa6519f9a79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[April]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="46" width="80" height="20" uuid="d67a6d84-1f9c-405d-9736-18ce9a89b80e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Desember]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="273" y="24" width="80" height="20" uuid="eb7b0167-d49c-4848-a44e-1ea2670dfdf4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{april}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="24" width="80" height="20" uuid="12bf70c2-46bc-4403-a6a6-8a8330307ba9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mei}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="65" width="80" height="20" uuid="1fb05c73-2493-4e43-acb2-16b4a7cfecb4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oktober}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="65" width="80" height="20" uuid="33cb33ef-2ec1-447a-8aba-04889ecbe3a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{november}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="24" width="80" height="20" uuid="d7100a9b-d85c-4b28-b84d-d0b981a0fe98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maret}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="24" width="80" height="20" uuid="148307e0-c8d6-4eb1-9b7e-8c96b26c14e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{februari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="65" width="80" height="20" uuid="ec4a0cdf-0aed-4682-bd02-95f801cba676"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{september}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="24" width="79" height="20" uuid="841a77f0-128b-4b1a-804c-abc3bb2b2761"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{januari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="65" width="80" height="20" uuid="b7ccd9ff-5245-43a3-881d-e600d9927604"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agustus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="65" width="80" height="20" uuid="1975ce3c-d7a3-4aa8-b97b-33fd5fe2008b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desember}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="65" width="80" height="20" uuid="908ea713-850e-4426-8b48-6a1e661dbde7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{juli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="24" width="80" height="20" uuid="e96284f2-69d8-41ab-b31f-14fbaef03642"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{juni}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="37" y="4" width="474" height="1" uuid="46dd68d4-6dfc-491a-bf41-51e007b699dd"/>
+			</line>
+			<line>
+				<reportElement x="37" y="5" width="1" height="38" uuid="eaee74e3-ed44-41d3-bb58-3c2894a449a4"/>
+			</line>
+			<line>
+				<reportElement x="37" y="24" width="474" height="1" uuid="b421e103-c50f-4e7d-8e93-5041e8f6e84f"/>
+			</line>
+			<line>
+				<reportElement x="37" y="43" width="474" height="1" uuid="a5de05f2-b815-4408-8c69-7b545bbd32fb"/>
+			</line>
+			<line>
+				<reportElement x="115" y="5" width="1" height="38" uuid="8bf70504-6c50-4f2b-a575-b9356abf7240"/>
+			</line>
+			<line>
+				<reportElement x="194" y="5" width="1" height="38" uuid="0ccfd8ec-3c58-4a28-bb3c-053924197ec8"/>
+			</line>
+			<line>
+				<reportElement x="274" y="5" width="1" height="38" uuid="87dec981-7eee-42b2-96b5-9907f3d4c6bf"/>
+			</line>
+			<line>
+				<reportElement x="352" y="5" width="1" height="38" uuid="735fd02a-9d47-4109-bf2e-86b4587a90a8"/>
+			</line>
+			<line>
+				<reportElement x="431" y="5" width="1" height="38" uuid="a97b7e09-51fd-45b4-bcae-ed1bbbf77583"/>
+			</line>
+			<line>
+				<reportElement x="510" y="5" width="1" height="38" uuid="8f3a39db-be22-4bd5-a8b3-2970207accd1"/>
+			</line>
+			<line>
+				<reportElement x="38" y="46" width="474" height="1" uuid="23596497-1884-495f-8cab-c2483b6f8c32"/>
+			</line>
+			<line>
+				<reportElement x="37" y="64" width="474" height="1" uuid="1b0216d9-2038-427b-a0c4-dede287734fb"/>
+			</line>
+			<line>
+				<reportElement x="37" y="84" width="474" height="1" uuid="f9c8a592-eac7-4bf2-a057-9dcaa4fa7316"/>
+			</line>
+			<line>
+				<reportElement x="37" y="46" width="1" height="38" uuid="de28dc96-f732-473c-b58b-902bbd7b4ab3"/>
+			</line>
+			<line>
+				<reportElement x="116" y="46" width="1" height="38" uuid="b79b0b56-8994-4071-9be8-e65dc40991aa"/>
+			</line>
+			<line>
+				<reportElement x="195" y="46" width="1" height="38" uuid="a209e069-82a1-4378-a951-a6c53c206887"/>
+			</line>
+			<line>
+				<reportElement x="274" y="46" width="1" height="38" uuid="9b37e4d1-53cc-4088-a9c0-6ddc8b5540ee"/>
+			</line>
+			<line>
+				<reportElement x="353" y="46" width="1" height="38" uuid="eeca1962-c2a3-4185-b27a-5916b189098e"/>
+			</line>
+			<line>
+				<reportElement x="432" y="46" width="1" height="38" uuid="eb56c5ab-9558-455a-a78e-0c0695fe9818"/>
+			</line>
+			<line>
+				<reportElement x="511" y="47" width="1" height="38" uuid="710db8ea-f79d-4d40-bfda-e8309c54df38"/>
+			</line>
+			<textField>
+				<reportElement x="253" y="140" width="162" height="20" uuid="67e03029-74a9-4c91-99a9-bc28acb70a1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thn_ajr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="178" y="140" width="138" height="20" uuid="6ff6589b-e35f-4740-b098-10e37f6cb4fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAHUN PELAJARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="101" width="178" height="20" uuid="b378a281-9576-4eaf-b135-3ae3a4b1ce22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KWITANSI PEMBAYARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="120" width="302" height="20" uuid="00ba58da-2d10-4692-9cae-cbc46521d60b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BIAYA PENYELENGGARA PENDIDIKAN (BPP)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="217" width="40" height="20" uuid="0560861f-a632-4fd7-94a1-73d21e5b4532"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="177" width="63" height="20" uuid="6280dc9c-b6a2-4549-8625-86ce2e7adcc7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Terima dari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="197" width="30" height="20" uuid="e48f15db-7762-4519-860a-4fc22e9b1c71"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="6" y="165" width="293" height="182" uuid="fea17054-3cf4-455a-962f-ca4f70275739"/>
+				<imageExpression><![CDATA["C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\spp\\src\\New folder\\Untitled-12.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="91" y="296" width="372" height="1" uuid="7bf0359d-7485-4795-b1f2-cb66af4b1e46"/>
+			</line>
+			<line>
+				<reportElement x="91" y="320" width="372" height="1" uuid="14c43fbd-b71b-430d-8194-a1b4bb313a49"/>
+			</line>
+			<staticText>
+				<reportElement x="166" y="197" width="30" height="20" uuid="5289ed49-c7c1-4dd3-ad2e-083004227066"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="327" width="30" height="20" uuid="cd2cc8c8-f23d-4c02-8003-c9b62f8085c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="177" width="30" height="20" uuid="6efe4159-6bfb-4021-9503-a381953a6800"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="215" y="197" width="154" height="20" uuid="caab5706-5704-40b8-85c9-bde63ab4102f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="327" width="154" height="20" uuid="94df83a2-7080-454a-b35f-cff3e1cb0bfc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{byr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="91" y="327" width="63" height="20" uuid="0207e0cf-b944-4c8c-be5f-a339263e02d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Terbilang]]></text>
+			</staticText>
+			<line>
+				<reportElement x="91" y="273" width="372" height="1" uuid="c5827844-c096-4c46-b69e-cff31de7af15"/>
+			</line>
+			<textField>
+				<reportElement x="215" y="217" width="154" height="20" uuid="629267cc-2e9e-4029-831a-1ba35a0e1176"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="177" width="154" height="20" uuid="cdf4e0f0-e54e-4081-a8fa-205fac409195"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="166" y="217" width="30" height="20" uuid="e5b45ed5-435f-4106-8aaf-728df73c6440"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="254" width="105" height="20" uuid="0b6c7c38-55b1-45f0-86fb-e3873f04094b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pembayaran bulan-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="195" y="254" width="267" height="20" uuid="53eabf19-43e8-44f7-87fe-b037ef2635bc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bulan_Bayar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="396" width="80" height="20" uuid="9cc75239-9f19-4e16-9dd9-42369039a852"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Oktober]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="354" width="80" height="20" uuid="74e393f0-3914-48eb-9c22-0b4ba0ab3a79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Maret]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="359" y="415" width="80" height="20" uuid="b904a970-0c26-4417-86b8-9bf93995e238"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{november}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="415" width="80" height="20" uuid="1839874a-9515-414b-9f2c-dac27c26de6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{juli}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="43" y="414" width="474" height="1" uuid="153c94e5-814b-45be-9725-5b62abdace3b"/>
+			</line>
+			<staticText>
+				<reportElement x="201" y="396" width="80" height="20" uuid="8ea7ca39-71ab-4a74-813e-fe48fb9dc5c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[September]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="354" width="80" height="20" uuid="5d035348-66b3-4876-84e8-6917317c3b72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[April]]></text>
+			</staticText>
+			<line>
+				<reportElement x="200" y="355" width="1" height="38" uuid="86c70a26-b0ac-431e-b20b-b90489756fcf"/>
+			</line>
+			<line>
+				<reportElement x="43" y="434" width="474" height="1" uuid="05e7da0e-b513-45cc-8a59-5ef5151452e7"/>
+			</line>
+			<line>
+				<reportElement x="437" y="355" width="1" height="38" uuid="d9485a9c-b6bb-4236-9e25-f64ba2fd8e5f"/>
+			</line>
+			<line>
+				<reportElement x="122" y="396" width="1" height="38" uuid="434b69e1-db1e-4659-8c0c-36140240c8f0"/>
+			</line>
+			<line>
+				<reportElement x="121" y="355" width="1" height="38" uuid="dcefe351-2909-4902-8e13-7018b7d1134c"/>
+			</line>
+			<textField>
+				<reportElement x="358" y="374" width="80" height="20" uuid="0bf41d76-14e2-4ac0-a2b6-6a5ca56950de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mei}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="415" width="80" height="20" uuid="61a1008b-5f32-4692-8ad5-3f2bb53b24b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oktober}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="374" width="79" height="20" uuid="ab58b96d-9778-409a-be1f-344cc08334e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{januari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="374" width="80" height="20" uuid="2430c760-7e13-40da-b94c-71e2e38dbc16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{juni}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="44" y="396" width="474" height="1" uuid="f9937be6-d8a4-4865-a3f6-00191919b63a"/>
+			</line>
+			<line>
+				<reportElement x="516" y="355" width="1" height="38" uuid="7fb3b869-dd08-42c3-b391-f2bfb9b67366"/>
+			</line>
+			<line>
+				<reportElement x="280" y="396" width="1" height="38" uuid="9a7c993e-cc2d-4211-8e01-19fa08d31978"/>
+			</line>
+			<staticText>
+				<reportElement x="121" y="354" width="80" height="20" uuid="ef58bed0-8aff-4224-b73f-1ca5b9526bb7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Februari]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="122" y="415" width="80" height="20" uuid="90fb7592-fe3f-4c8f-86ad-1ce277d80b27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agustus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="122" y="396" width="80" height="20" uuid="26a6ec3a-0b37-4678-bfbd-83c6f26697dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Agustus]]></text>
+			</staticText>
+			<line>
+				<reportElement x="280" y="355" width="1" height="38" uuid="e11b2a0b-ef78-4411-93ea-b7229b40f323"/>
+			</line>
+			<line>
+				<reportElement x="43" y="393" width="474" height="1" uuid="76725ddc-11cd-4e46-93f9-ca3017d55df7"/>
+			</line>
+			<line>
+				<reportElement x="43" y="354" width="474" height="1" uuid="d66cc030-a92d-45df-b720-d682a7a8dc07"/>
+			</line>
+			<staticText>
+				<reportElement x="437" y="354" width="80" height="20" uuid="db519fb7-e1c8-49aa-b80f-eca29301b2fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Juni]]></text>
+			</staticText>
+			<line>
+				<reportElement x="358" y="355" width="1" height="38" uuid="51683a6f-5dd0-4796-95c6-61f873e3e8cc"/>
+			</line>
+			<staticText>
+				<reportElement x="43" y="354" width="80" height="20" uuid="9489be79-7427-48ba-9807-d96bf818b529"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Januari]]></text>
+			</staticText>
+			<line>
+				<reportElement x="43" y="374" width="474" height="1" uuid="1bf27af2-587c-47e8-ab72-83e77d6621d8"/>
+			</line>
+			<textField>
+				<reportElement x="279" y="374" width="80" height="20" uuid="392a40f1-ff86-41f3-8727-9085d26b113e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{april}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="517" y="397" width="1" height="38" uuid="004e68fd-08ad-42ab-b1e3-01e49a436626"/>
+			</line>
+			<staticText>
+				<reportElement x="43" y="396" width="80" height="20" uuid="47e7cb7f-91c6-4ab9-b901-d07c7aa96734"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Juli]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="415" width="80" height="20" uuid="831840e2-9cb5-4631-85da-a6cf710a7cc0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{september}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="438" y="396" width="1" height="38" uuid="a6619ac7-2410-4acc-8157-b456d8b26331"/>
+			</line>
+			<textField>
+				<reportElement x="200" y="374" width="80" height="20" uuid="06bfad82-eba9-469a-8ef3-96e01ccd43ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maret}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="359" y="396" width="80" height="20" uuid="6117cfc2-6871-458c-8693-d63bea43f13a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[November]]></text>
+			</staticText>
+			<line>
+				<reportElement x="43" y="355" width="1" height="38" uuid="e5da9cd9-fce2-4f9a-8ee1-09ee375022ae"/>
+			</line>
+			<line>
+				<reportElement x="201" y="396" width="1" height="38" uuid="2db13ce3-57c8-4420-9a4d-b09f943200ab"/>
+			</line>
+			<staticText>
+				<reportElement x="438" y="396" width="80" height="20" uuid="ef6e3a23-cb0f-4494-a230-ce1c3468fe5e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Desember]]></text>
+			</staticText>
+			<line>
+				<reportElement x="359" y="396" width="1" height="38" uuid="aab705f6-a58b-44ca-8ac5-14ed85046074"/>
+			</line>
+			<textField>
+				<reportElement x="438" y="415" width="80" height="20" uuid="6653df69-14c8-4e2c-9f0f-620484aa966e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desember}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="358" y="354" width="80" height="20" uuid="b2799b56-743d-46ae-92f3-1ad7110cb414"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mei]]></text>
+			</staticText>
+			<line>
+				<reportElement x="43" y="396" width="1" height="38" uuid="9eb68dcc-cee9-41fe-8164-8ee4c9333bae"/>
+			</line>
+			<textField>
+				<reportElement x="121" y="374" width="80" height="20" uuid="33b8d928-4b7b-42b7-a577-eabf78b8b533"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{februari}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="10" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="10" splitType="Stretch"/>
+	</summary>
+</jasperReport>

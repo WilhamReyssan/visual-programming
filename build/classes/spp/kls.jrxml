@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f22bcade-5fa8-457a-a7bb-374e2bf38e8c">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="358"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT siswa.*,bulan.* FROM siswa INNER JOIN bulan ON siswa.nis=bulan.nis;]]>
+	</queryString>
+	<field name="nis" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="thn_ajr" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bln" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="nis">
+		<groupExpression><![CDATA[$F{nis}]]></groupExpression>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+	</group>
+	<group name="kelas">
+		<groupExpression><![CDATA[$F{kelas}]]></groupExpression>
+	</group>
+	<group name="thn_ajr">
+		<groupExpression><![CDATA[$F{thn_ajr}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="192" splitType="Stretch">
+			<textField>
+				<reportElement x="233" y="50" width="162" height="20" uuid="7638d743-693c-4870-a269-bb4883381d53"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thn_ajr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="167" y="50" width="138" height="20" uuid="afb735f5-d66d-43bb-a474-818fa16e60fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAHUN PELAJARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="10" width="207" height="20" uuid="33cfbe79-095e-4100-993b-12a8372fb357"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN TUNGGAKAN KELAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="30" width="302" height="20" uuid="fbb1918d-0e82-4802-9bc6-411d814c629a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BIAYA PENYELENGGARA PENDIDIKAN (BPP)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="162" width="372" height="1" uuid="57f746ac-c1aa-4751-9b96-b359b5b0901c"/>
+			</line>
+			<line>
+				<reportElement x="120" y="186" width="372" height="1" uuid="8209ced3-ee23-4975-b08f-eb9c8133cee1"/>
+			</line>
+			<staticText>
+				<reportElement x="92" y="107" width="30" height="20" uuid="e150fe97-5e21-4887-8fa7-c33eb2f71158"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="107" width="154" height="20" uuid="0ab70318-c8df-4ee4-b8e5-e7a2e6539082"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="120" y="139" width="372" height="1" uuid="f9c93acf-1e5c-48a9-aea8-ce9c5a9165a1"/>
+			</line>
+			<staticText>
+				<reportElement x="17" y="107" width="40" height="20" uuid="38cee63a-ae8f-430a-9aba-da259ebaf5e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="18" y="12" width="78" height="20" uuid="d99034c6-30c2-4b51-a155-dae13589d054"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="12" width="136" height="20" uuid="ea9a6ed9-40e0-4f58-8949-fa82075b2c29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="12" width="306" height="20" uuid="fccb40a5-8fc4-4c12-ae98-249be4bbb86c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tunggakan]]></text>
+			</staticText>
+			<line>
+				<reportElement x="18" y="12" width="518" height="1" uuid="90d7cb18-13ce-4799-bc03-3f89e2c12811"/>
+			</line>
+			<line>
+				<reportElement x="18" y="31" width="518" height="1" uuid="fbea326d-c1c9-4954-8176-980fea1b5d6e"/>
+			</line>
+			<line>
+				<reportElement x="535" y="13" width="1" height="18" uuid="db634e21-e9a5-4dfd-b257-cc0da8d30ca3"/>
+			</line>
+			<line>
+				<reportElement x="230" y="12" width="1" height="18" uuid="d8786ff8-7def-4dda-a4b8-02895710feaa"/>
+			</line>
+			<line>
+				<reportElement x="18" y="13" width="1" height="18" uuid="969bf31c-48bf-4a28-b60e-49a347f38aea"/>
+			</line>
+			<line>
+				<reportElement x="95" y="13" width="1" height="18" uuid="39639a41-3724-4de0-8d63-e628fc96dce3"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="18" y="0" width="78" height="20" uuid="09b7a9ac-ccae-4d91-ac7e-6becec741cac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="0" width="136" height="20" uuid="b6935710-4d8a-43ed-afc1-914902e47212"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="0" width="302" height="20" uuid="f2a2f183-cf6e-4204-ab28-96b3dbfba89c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bln}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="18" y="19" width="518" height="1" uuid="d7945d4b-9c2c-4266-99c8-78a8bff8aba0"/>
+			</line>
+			<line>
+				<reportElement x="18" y="-1" width="1" height="20" uuid="1d09b5ad-b1df-45b6-aa7e-30e7a8cbebdb"/>
+			</line>
+			<line>
+				<reportElement x="95" y="-1" width="1" height="20" uuid="e9eea025-4aa1-4768-9504-68c8b5d83e57"/>
+			</line>
+			<line>
+				<reportElement x="230" y="-1" width="1" height="20" uuid="687c48ac-739b-456e-a3b2-5adde827f2ef"/>
+			</line>
+			<line>
+				<reportElement x="535" y="-1" width="1" height="20" uuid="22e4c483-8a01-47b3-ae3a-19ebcaa2820a"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
